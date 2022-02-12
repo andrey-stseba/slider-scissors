@@ -23,13 +23,18 @@ function changeSlide (direction) {
   if (direction === 'up') {
     activeSlideIndex++
     if (activeSlideIndex === slidesCount) {
-      activeSlideIndex = slidesCount - 1
+      // При необходимости движения картинок по кругу заменить соотвествующий код на указаный в коментариях
+      activeSlideIndex = slidesCount - 1 // activeSlideIndex = 0
     }
   } else if (direction === 'down') {
     if (activeSlideIndex <= 0) {
       activeSlideIndex = 1
     }
     activeSlideIndex--
+    // activeSlideIndex--
+    // if (activeSlideIndex < 0) {
+    //   activeSlideIndex = slidesCount - 1
+    // }
   }
 
   const height = container.clientHeight
